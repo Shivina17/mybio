@@ -16,8 +16,8 @@
         <span1>North Haugh,</span1>
         <span1>St. Andrews, Fife, KY169XW,</span1>
         <span1>Scotland, UK</span1>
-        <span1>sks8@st-andrews.ac.uk</span>
-        <span1>+44 7423653726</span>
+        <span1>sks8@st-andrews.ac.uk</span1>
+        <span1>+44 7423653726</span1>
         </h4>
 
         <ul class="menu">
@@ -231,69 +231,7 @@
     </div> 
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/main.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
   </body>
 </html>
 
-<script>
-	var main = function() {
-  
-  $('.arrow-next').click(function() {
-    var currentSlide = $('.active-slide');
-    var nextSlide = currentSlide.next();
-
-    var currentDot = $('.active-dot');
-    var nextDot = currentDot.next();
-    
-    var currentLi = $('.active-li');
-    var nextLi = currentLi.next();
-    
-
-    if(nextSlide.length === 0) {
-      nextSlide = $('.slide').first();
-      nextDot = $('.dot').first();
-      nextLi = $('.menu .li').first();
-    }
-    
-    currentSlide.fadeOut(300).removeClass('active-slide');
-    nextSlide.fadeIn(300).addClass('active-slide');
-
-    currentDot.removeClass('active-dot');
-    nextDot.addClass('active-dot');
-    
-    currentLi.removeClass('active-li');
-    nextLi.addClass('active-li');
-    
-  });
-
-
-  $('.arrow-prev').click(function() {
-    var currentSlide = $('.active-slide');
-    var prevSlide = currentSlide.prev();
-
-    var currentDot = $('.active-dot');
-    var prevDot = currentDot.prev();
-    
-    var currentLi = $('.active-li');
-    var nextLi = currentLi.prev();
-
-    if(prevSlide.length === 0) {
-      prevSlide = $('.slide').last();
-      prevDot = $('.dot').last();
-       nextLi = $('.menu li').last();
-    }
-    
-    currentSlide.fadeOut(300).removeClass('active-slide');
-    prevSlide.fadeIn(300).addClass('active-slide');
-
-    currentDot.removeClass('active-dot');
-    prevDot.addClass('active-dot');
-    
-    currentLi.removeClass('active-li');
-    nextLi.addClass('active-li');
-  });
-
-}
-
-$(document).ready(main);
-</script>
